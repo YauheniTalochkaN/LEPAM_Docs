@@ -3,7 +3,9 @@ site_url: https://yauhenitalochkan.github.io/LEPAM_Docs/
 nav:
   - Home: index.md
   - Installation: install.md
+  - Processes: processes.md
   - About: about.md
+
 theme:
   name: readthedocs
 
