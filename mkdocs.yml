@@ -7,5 +7,8 @@ nav:
 theme:
   name: readthedocs
 
+plugins:
+  - glightbox
+
 copyright: |
   &copy; 2024 <a href="https://github.com/YauheniTalochkaN"  target="_blank" rel="noopener">Yauheni Talochka</a>
