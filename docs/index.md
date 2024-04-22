@@ -1,4 +1,4 @@
 # Welcome to the LEPAM package web page
-<figure markdown="span">
-  ![](https://github.com/YauheniTalochkaN/LEPAM_Docs/blob/main/docs/Logo.PNG){ width="300" }
-</figure>
+<div style="text-align:center">
+  <img src="Logo.PNG" alt="" width="400">
+</div>
