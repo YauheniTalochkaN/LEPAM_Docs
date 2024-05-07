@@ -5,6 +5,7 @@ nav:
   - Installation: install.md
   - Processes: processes.md
   - About: about.md
+  - References: references.md
 
 theme:
   name: readthedocs

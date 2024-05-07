@@ -1,4 +1,8 @@
 # Here the description of particle processes is provided
+
+# List of processes
 <div style="text-align:center">
-  <img src="../images/100keV_electron_track_in_LYSO.gif" alt="" width="400">
+  <img src="../images/Process_diagram.png" alt="" width="700">
 </div>
+
+# Inelastic electron scattering
