@@ -4,6 +4,7 @@
 <div style="text-align:center">
   <img src="../images/Process_diagram.png" alt="" width="700">
 </div>
+<br>
 
 # Inelastic electron scattering
 The inelastic mean free path $\lambda_{peh}^{-1}$ for a charge particle in a crystalline material can be obtained using the dielectric permittivity $\varepsilon(\omega,q)$ [1]: 
