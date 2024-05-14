@@ -12,6 +12,6 @@
 </div>
 
 <div style="text-align:center">
-  <img src="images/100keV_electron_track_in_LYSO.gif" alt="" width="400">
+  <img src="images/100keV_electron_track_in_LYSO.gif" alt="" width="600">
   <figcaption>10-keV electron track in LYSO scintillator</figcaption>
 </div>
