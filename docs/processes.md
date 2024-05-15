@@ -20,7 +20,7 @@ Here, $Ze$ is the particle charge, $a_{B}$ is the Bohr radius for hydrogen, $m_{
 
 The dielectric permittivity can be calculated using the TDDFT method or the more accurate GW+BSE approach implemented in the Quantum Espresso package [2].
 
-For ionic crystals imaginary part of $\varepsilon(\omega, 0)$ can be obtained by using the photoexcitation cross section $\sigma_{i}$ of atomic shells of components presented in the Evaluated Photon Data Library (EPDL97) [3] taking into account the correction of the population $\Delta f_{i}$ and the energy $\Delta E_{i}$ of atomic shells:
+For ionic crystals imaginary part $\varepsilon_{2}(\omega, 0)$ of the dielectric permittivity can be obtained by using the photoexcitation cross section $\sigma_{i}$ of atomic shells of components presented in the Evaluated Photon Data Library (EPDL97) [3] taking into account the correction of the population $\Delta f_{i}$ and the energy $\Delta E_{i}$ of atomic shells:
 
 <center>  
     $\varepsilon_{2}(\omega, 0) = \sum_{i} \varepsilon_{2}^{i}(\omega, 0) = \frac{nc}{\omega} \sum_{i} (f_{i} + \Delta f_{i}) N_{i} \sigma_{i} (\hbar \omega + \Delta E_{i})$.
@@ -34,7 +34,11 @@ To extrapolate the dielectric permittivity for the case of nonzero $q$, the Gene
     $\varepsilon_{2}(\omega, q) = \frac{\sqrt{m_{e}}}{2 \sqrt{2} \hbar^{2} \omega q} \sum_{i} \int_{E_{i} + (\sqrt{\hbar \omega - E_{i}} - \frac{\hbar q}{\sqrt{2 m_{e}}})^{2}}^{E_{i} + (\sqrt{\hbar \omega - E_{i}} + \frac{\hbar q}{\sqrt{2 m_{e}}})^{2}} \frac{\hbar \omega'}{\sqrt{\hbar \omega' - E_{i}}} \varepsilon_{2}^{i}(\omega', 0) d(\hbar \omega')$.
 </center>
 
-The Kramers-Kronig relations can be used to obtain the real part of the dielectric permittivity to correct the energy loss function.
+The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1}(\omega, q)$ of the dielectric permittivity to correct the energy loss function:
+
+<center>  
+    $\varepsilon_{1}(\omega, q) = 1 + \frac{2}{\pi} \mathcal{P} \int_{0}^{\infty} \frac{\omega' \varepsilon_{2}(\omega, q)}{\omega'^{2}-\omega^{2}} d \omega'$.
+</center>
 
 <br>
 
