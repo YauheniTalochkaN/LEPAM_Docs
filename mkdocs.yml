@@ -19,6 +19,7 @@ theme:
     - content.code.annotation
     - content.code.copy
   language: en
+  logo: images/Logo2.png
   palette:
     - scheme: default
       toggle:
@@ -32,6 +33,7 @@ theme:
         name: Switch to light mode    
       primary: teal
       accent: deep purple
+
 
 plugins:
   - glightbox

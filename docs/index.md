@@ -13,5 +13,5 @@
 
 <div style="text-align:center">
   <img src="images/100keV_electron_track_in_LYSO.gif" alt="" width="600">
-  <figcaption>10-keV electron track in LYSO scintillator</figcaption>
+  <figcaption>100-keV electron track in LYSO:Ce scintillator</figcaption>
 </div>
