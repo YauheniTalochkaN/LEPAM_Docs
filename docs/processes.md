@@ -1,11 +1,11 @@
-# List of processes
+## List of processes
 <div style="text-align:center">
   <img src="../images/Process_diagram.png" alt="" width="700">
   <br>
   <br>
 </div>
 
-# Inelastic electron scattering
+## Inelastic electron scattering
 The inelastic mean free path $\lambda_{peh}^{-1}$ for a charge particle in a crystalline material can be obtained using the dielectric permittivity $\varepsilon(\omega,q)$ [1]:
 
 <center>
@@ -36,9 +36,9 @@ To extrapolate the dielectric permittivity for the case of nonzero $q$, the Gene
 The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1}(\omega, q)$ of the dielectric permittivity to correct the energy loss function:
 
 <center>  
-    $\varepsilon_{1}(\omega, q) = 1 + \frac{2}{\pi} \mathcal{P} \int_{0}^{\infty} \frac{\omega' \varepsilon_{2}(\omega, q)}{\omega'^{2}-\omega^{2}} d \omega'$.
+    $\varepsilon_{1}(\omega, q) = 1 + \frac{2}{\pi} \mathcal{P} \int_{0}^{\infty} \frac{\omega' \varepsilon_{2}(\omega', q)}{\omega'^{2}-\omega^{2}} d \omega'$.
 </center>
 
 <br>
 
-# Auger process
+## Auger process
