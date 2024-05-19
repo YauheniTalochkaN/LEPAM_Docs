@@ -17,6 +17,11 @@ The inelastic mean free path $\lambda_{peh}^{-1}$ for a charge particle in a cry
 
 Here, $Ze$ is the particle charge, $a_{B}$ is the Bohr radius for hydrogen, $m_{e}$ is the electron mass, $\hbar$ is the reduced Planck constant, $v(E) = c \frac{\sqrt{E(E+2mc^{2})}}{E+2mc^{{2}}}$ is the particle velocity, $m$ is the particle mass, $c$ is the light velocity.
 
+<div style="text-align:center">
+  <img src="../images/Inelastic_mean_free_path_for_electrons_in_LYSO.png" alt="" width="700">
+  <figcaption>Inelastic mean free path for electrons interacting with subshells of LYSO scintillator.</figcaption>
+</div>
+
 The dielectric permittivity can be calculated using the TDDFT method or the more accurate GW+BSE approach implemented in the Quantum Espresso package [2].
 
 For ionic crystals imaginary part $\varepsilon_{2}(\omega, 0)$ of the dielectric permittivity can be obtained by using the photoexcitation cross section $\sigma_{i}$ of atomic shells of components presented in the Evaluated Photon Data Library (EPDL97) [3] taking into account the correction of the population $\Delta f_{i}$ and the energy $\Delta E_{i}$ of atomic shells:
@@ -39,6 +44,31 @@ The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1
     $\varepsilon_{1}(\omega, q) = 1 + \frac{2}{\pi} \mathcal{P} \int_{0}^{\infty} \frac{\omega' \varepsilon_{2}(\omega', q)}{\omega'^{2}-\omega^{2}} d \omega'$.
 </center>
 
+<div style="text-align:center">
+  <img src="../images/Energy_loss_function_in_LYSO.png" alt="" width="700">
+  <figcaption>Energy loss function in LYSO scintillators.</figcaption>
+</div>
 <br>
 
 ## Auger process
+
+
+## Electron/hole/exciton-phonon scattering
+
+
+## Alloy scattering
+
+
+## e-h interaction
+
+
+## Exciton decay
+
+
+## Excitation capture and transfer
+
+
+## Activation center decay 
+
+
+## Light propagation and absorption
