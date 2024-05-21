@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - Installation: install.md
   - Processes: processes.md
+  - 'QE applications': QE_examples.md
   - References: references.md
 
 theme:
