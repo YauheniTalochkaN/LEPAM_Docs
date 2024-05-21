@@ -54,20 +54,20 @@ The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1
 The rate of Auger decay $\tau_{hhe}^{-1}$ ($\sim 10^{15} s^{-1}$) for a core hole can be calculated as follows [4]:
 
 <center> 
-$\tau_{hhe}^{-1} = \frac{1}{\pi^{2}} \int d\omega \int d^{3}q \operatorname{Im}\left(- \frac{1}{\varepsilon(\omega,q)}\right) M_{\overrightarrow{q}}^{hh}(E, E-\hbar \omega) g_{h}(E-\hbar \omega)$,
+$\tau_{hhe}^{-1} = \frac{1}{\pi^{2}} \int d\omega \int d^{3}q \operatorname{Im}\left(- \frac{1}{\varepsilon(\omega,q)}\right) M_{\vec{q}}^{hh}(E, E-\hbar \omega) g_{h}(E-\hbar \omega)$,
 </center>
 
 with 
 
 <center> 
-$M_{\overrightarrow{q}}^{hh}(E, E-\hbar \omega) g_{h}(E) g_{h}(E-\hbar \omega) = \frac{V}{q^{2}} \sum_{_{n', \overrightarrow{k}'}^{n, \overrightarrow{k}}} (|\rho_{n,\overrightarrow{k};n,\overrightarrow{k}'}|^{2})_{-\overrightarrow{q}} \; \delta(E - E_{n'}(\overrightarrow{k}')) \, \delta(E - \hbar \omega - E_{n}(\overrightarrow{k}))$,
+$M_{\vec{q}}^{hh}(E, E-\hbar \omega) g_{h}(E) g_{h}(E-\hbar \omega) = \frac{V}{q^{2}} \sum_{_{n', \vec{k}'}^{n, \vec{k}}} (|\rho_{n,\vec{k};n,\vec{k}'}|^{2})_{-\vec{q}} \; \delta(E - E_{n'}(\vec{k}')) \, \delta(E - \hbar \omega - E_{n}(\vec{k}))$,
 
-$(|\rho_{n,\overrightarrow{k};n,\overrightarrow{k}'}|^{2})_{-\overrightarrow{q}} = \frac{(2\pi)^{3} e^{2}}{V^{2}} P_{n,\overrightarrow{k};n,\overrightarrow{k}'} \delta(\overrightarrow{q} + \overrightarrow{k} - \overrightarrow{k}')$,
+$(|\rho_{n,\vec{k};n,\vec{k}'}|^{2})_{-\vec{q}} = \frac{(2\pi)^{3} e^{2}}{V^{2}} P_{n,\vec{k};n,\vec{k}'} \delta(\vec{q} + \vec{k} - \vec{k}')$,
 
-$P_{n,\overrightarrow{k};n,\overrightarrow{k}'} = |\int_{v} u_{n,\overrightarrow{k}}^{*}(\overrightarrow{r}) u_{n',\overrightarrow{k}'}(\overrightarrow{r})|^{2} d^{3} r$.
+$P_{n,\vec{k};n,\vec{k}'} = |\int_{v} u_{n,\vec{k}}^{*}(\vec{r}) u_{n',\vec{k}'}(\vec{r})|^{2} d^{3} r$.
 </center>
 
-Here, $g_{h}(E)$ is the density of states in the valence and core bands of a crystal, $V$ is the crystal volume, $v$ is the volume of the unit cell, $u_{n,\overrightarrow{k}}(\overrightarrow{r})$ is the periodic part of the Bloch function: $\psi_{n,\overrightarrow{k}}(\overrightarrow{r}) = \frac{1}{\sqrt{V}} u_{n,\overrightarrow{k}}(\overrightarrow{r}) e^{i \overrightarrow{k} \cdot \overrightarrow{r}}$.
+Here, $g_{h}(E)$ is the density of states in the valence and core bands of a crystal, $V$ is the crystal volume, $v$ is the volume of the unit cell, $u_{n,\vec{k}}(\vec{r})$ is the periodic part of the Bloch function: $\psi_{n,\vec{k}}(\vec{r}) = \frac{1}{\sqrt{V}} u_{n,\vec{k}}(\vec{r}) e^{i \vec{k} \cdot \vec{r}}$.
 
 ## Electron(hole)-phonon scattering
 DFT packages such as Quantum Espresso [2] can be used to calculate the carrier-phonon scattering rate with high accuracy for both single crystals and substitutional solid solutions.
@@ -90,8 +90,44 @@ $\beta = 4 \pi \frac{e_{14}}{\varepsilon_{st}}$, $k = \frac{1}{4 \pi \varepsilon
 
 Here, $m^{*}$  is the effective electron(hole) mass, $\Omega_{LO,s}$ is the longitudinal optical phonon frequency, $\varepsilon_{0}$ is the vacuum permittivity, $e$ is the electron charge, $k_{B}$ is the Boltzmann constant, $\tilde{\varepsilon}_{s}$ is the effective dielectric permittivity, $\rho$ is the crystal density, $c_{L}$ is the longitudinal sound velocity, $\sigma_{d}$ is the acoustical deformation potential, $e_{14}$ is the piezoelectric constant, $\varepsilon_{st}$ is the static dielectric permittivity, $\lambda^{2}_{TF}$ is the Thomas-Fermi screening length. 
 
-## Alloy scattering
+The electron(hole)-phonon scattering rate $\tau_{ph, _{abs}^{em}, disorder}^{-1}$ in a substitutional solid solution can be calculated by integrating $\tau_{ph, _{abs}^{em}}^{-1}$ with the semiclassical confining potential $E_{0}(\vec{r})$, which is evaluated using the local landscape method [7]:
 
+<center> 
+$\tau_{ph, _{abs}^{em}, disorder}^{-1} = \frac{1}{V} \int_{V} \tau_{ph, _{abs}^{em}}^{-1}(E + \tilde{E}_{0}(\vec{r})) d^{3}r$,
+</center>
+
+with 
+
+<center> 
+$\tilde{E}_{0}(\vec{r}) = E_{0}(\vec{r}) - <E_{0}>_{V}$.
+</center>
+
+The semiclassical confining potential $E_{0}(\vec{r})$ can be obtained by solving the following equation:
+
+<center> 
+$(- \frac{\hbar^{2}}{2 m^{*}_{vc}} + \tilde{u}(\vec{r})) \nu(\vec{r}) = 1$,
+
+$\tilde{u}(\vec{r}) = u(\vec{r}) - min(u(\vec{r}))$,
+
+$E_{0}(\vec{r}) \approx \frac{1}{\nu(\vec{r})} + min(u(\vec{r}))$,
+</center>
+
+with the periodic boundary conditions
+
+<center> 
+$\nu(\vec{r} + \vec{T}_{i}) = \nu(\vec{r})$.
+</center>
+
+Here, $u(\vec{r})$ is the disorder-induced potential fluctuations in the quasiclassical approximation, $m^{*}_{vc}$ is the electron (hole) effective mass in the virtual crystal.
+
+## Alloy scattering
+The alloy scattering rate $\tau_{el}^{-1}$ in crystalline compound can be calculated using the CPA-based method [6]:
+
+<center> 
+$\hat{H}_{vc} = x \hat{H}^{AC} + (1-x) \hat{H}^{BC}$,
+
+$\hat{H}_{vc} \ket{\phi_{n,\vec{k}}^{vc}} = \varepsilon_{n}^{vc}(\vec{k}) \ket{\phi_{n,\vec{k}}^{vc}}$
+</center>
 
 ## e-h interaction
 
