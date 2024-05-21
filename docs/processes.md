@@ -51,10 +51,44 @@ The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1
 <br>
 
 ## Auger process
+The rate of Auger decay $\tau_{hhe}^{-1}$ ($\sim 10^{15} s^{-1}$) for a core hole can be calculated as follows [4]:
 
+<center> 
+$\tau_{hhe}^{-1} = \frac{1}{\pi^{2}} \int d\omega \int d^{3}q \operatorname{Im}\left(- \frac{1}{\varepsilon(\omega,q)}\right) M_{\overrightarrow{q}}^{hh}(E, E-\hbar \omega) g_{h}(E-\hbar \omega)$,
+</center>
 
-## Electron/hole/exciton-phonon scattering
+with 
 
+<center> 
+$M_{\overrightarrow{q}}^{hh}(E, E-\hbar \omega) g_{h}(E) g_{h}(E-\hbar \omega) = \frac{V}{q^{2}} \sum_{_{n', \overrightarrow{k}'}^{n, \overrightarrow{k}}} (|\rho_{n,\overrightarrow{k};n,\overrightarrow{k}'}|^{2})_{-\overrightarrow{q}} \; \delta(E - E_{n'}(\overrightarrow{k}')) \, \delta(E - \hbar \omega - E_{n}(\overrightarrow{k}))$,
+
+$(|\rho_{n,\overrightarrow{k};n,\overrightarrow{k}'}|^{2})_{-\overrightarrow{q}} = \frac{(2\pi)^{3} e^{2}}{V^{2}} P_{n,\overrightarrow{k};n,\overrightarrow{k}'} \delta(\overrightarrow{q} + \overrightarrow{k} - \overrightarrow{k}')$,
+
+$P_{n,\overrightarrow{k};n,\overrightarrow{k}'} = |\int_{v} u_{n,\overrightarrow{k}}^{*}(\overrightarrow{r}) u_{n',\overrightarrow{k}'}(\overrightarrow{r})|^{2} d^{3} r$.
+</center>
+
+Here, $g_{h}(E)$ is the density of states in the valence and core bands of a crystal, $V$ is the crystal volume, $v$ is the volume of the unit cell, $u_{n,\overrightarrow{k}}(\overrightarrow{r})$ is the periodic part of the Bloch function: $\psi_{n,\overrightarrow{k}}(\overrightarrow{r}) = \frac{1}{\sqrt{V}} u_{n,\overrightarrow{k}}(\overrightarrow{r}) e^{i \overrightarrow{k} \cdot \overrightarrow{r}}$.
+
+## Electron(hole)-phonon scattering
+DFT packages such as Quantum Espresso [2] can be used to calculate the carrier-phonon scattering rate with high accuracy for both single crystals and substitutional solid solutions.
+
+The electron(hole)-phonon scattering rate $\tau_{ph, _{abs}^{em}}^{-1}$ can be evaluated assuming the single parabolic band approximation in the approximations of the Fröhlich polarization and the deformational potential [5]:
+
+<center> 
+$\tau_{PLO, s, _{abs}^{em}}^{-1}(E_{k}) = \frac{e^{2} \sqrt{m^{*}} \hbar \Omega_{LO,s}}{4 \sqrt{2} \pi \varepsilon_{0} \hbar \tilde{\varepsilon}_{s}} \frac{1}{E_{k}} (n(\hbar \Omega_{LO, s}) + \frac{1}{2} \pm \frac{1}{2}) \, ln(\lvert \frac{\sqrt{E_{k}}+\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}}{\sqrt{E_{k}}-\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}} \rvert)$,
+
+$\tau_{DLA, _{abs}^{em}}^{-1}(E_{k}) = \frac{\sqrt{m^{*}} \sigma_{d}^{2}}{4 \sqrt{2} \pi \hbar c_{L} \rho} \frac{1}{\sqrt{E_{k}}} \int_{0}^{2\frac{\sqrt{2 m^{*} E_{k} \mp c_{L} m^{*}}}{\hbar}} (n(\hbar q c_{L}) + \frac{1}{2} \pm \frac{1}{2}) q^{2} dq$, 
+
+$\tau_{PLA, _{abs}^{em}}^{-1}(E_{k}) = \frac{\sqrt{m^{*}} (k e \beta)^{2}}{4 \sqrt{2} \pi \hbar c_{L} \rho} \frac{1}{\sqrt{E_{k}}} \int_{0}^{2\frac{\sqrt{2 m^{*} E_{k} \mp c_{L} m^{*}}}{\hbar}} (n(\hbar q c_{L}) + \frac{1}{2} \pm \frac{1}{2}) \frac{\lambda^{2}_{TF} q^{2}}{1 + \lambda^{2}_{TF} q^{2}} dq$, 
+</center>
+
+with 
+
+<center> 
+$\beta = 4 \pi \frac{e_{14}}{\varepsilon_{st}}$, $k = \frac{1}{4 \pi \varepsilon_{0}}$, $n(\hbar \Omega) = \frac{1}{e^{\frac{\hbar \Omega}{k_{B} T}}-1}$.
+</center>
+
+Here, $m^{*}$  is the effective electron(hole) mass, $\Omega_{LO,s}$ is the longitudinal optical phonon frequency, $\varepsilon_{0}$ is the vacuum permittivity, $e$ is the electron charge, $k_{B}$ is the Boltzmann constant, $\tilde{\varepsilon}_{s}$ is the effective dielectric permittivity, $\rho$ is the crystal density, $c_{L}$ is the longitudinal sound velocity, $\sigma_{d}$ is the acoustical deformation potential, $e_{14}$ is the piezoelectric constant, $\varepsilon_{st}$ is the static dielectric permittivity, $\lambda^{2}_{TF}$ is the Thomas-Fermi screening length. 
 
 ## Alloy scattering
 
@@ -66,7 +100,7 @@ The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1
 
 
 ## Excitation capture and transfer
-
+The black-capture-sphere model can used to estimate the probability of carrier capture by emission centers [4].
 
 ## Activation center decay 
 
