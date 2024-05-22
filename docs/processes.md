@@ -75,7 +75,7 @@ DFT packages such as Quantum Espresso [2] can be used to calculate the carrier-p
 The electron(hole)-phonon scattering rate $\tau_{ph, _{abs}^{em}}^{-1}$ can be evaluated assuming the single parabolic band approximation in the approximations of the Fröhlich polarization and the deformational potential [5]:
 
 <center> 
-$\tau_{PLO, s, _{abs}^{em}}^{-1}(E_{k}) = \frac{e^{2} \sqrt{m^{*}} \hbar \Omega_{LO,s}}{4 \sqrt{2} \pi \varepsilon_{0} \hbar \tilde{\varepsilon}_{s}} \frac{1}{E_{k}} (n(\hbar \Omega_{LO, s}) + \frac{1}{2} \pm \frac{1}{2}) \, ln(\lvert \frac{\sqrt{E_{k}}+\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}}{\sqrt{E_{k}}-\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}} \rvert)$,
+$\tau_{PLO, s, _{abs}^{em}}^{-1}(E_{k}) = \frac{e^{2} \sqrt{m^{*}} \hbar \Omega_{LO,s}}{4 \sqrt{2} \pi \varepsilon_{0} \hbar \tilde{\varepsilon}_{s}} \frac{1}{E_{k}} (n(\hbar \Omega_{LO, s}) + \frac{1}{2} \pm \frac{1}{2}) \, ln\left(\left| \frac{\sqrt{E_{k}}+\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}}{\sqrt{E_{k}}-\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}} \right|\right)$,
 
 $\tau_{DLA, _{abs}^{em}}^{-1}(E_{k}) = \frac{\sqrt{m^{*}} \sigma_{d}^{2}}{4 \sqrt{2} \pi \hbar c_{L} \rho} \frac{1}{\sqrt{E_{k}}} \int_{0}^{2\frac{\sqrt{2 m^{*} E_{k} \mp c_{L} m^{*}}}{\hbar}} (n(\hbar q c_{L}) + \frac{1}{2} \pm \frac{1}{2}) q^{2} dq$, 
 
@@ -126,11 +126,33 @@ The alloy scattering rate $\tau_{el}^{-1}$ in crystalline compound can be calcu
 <center> 
 $\hat{H}_{vc} = x \hat{H}^{AC} + (1-x) \hat{H}^{BC}$,
 
-$\hat{H}_{vc} \ket{\phi_{n,\vec{k}}^{vc}} = \varepsilon_{n}^{vc}(\vec{k}) \ket{\phi_{n,\vec{k}}^{vc}}$
+$\hat{H}_{vc} \ket{\phi_{n,\vec{k}}^{vc}} = \varepsilon_{n}^{vc}(\vec{k}) \ket{\phi_{n,\vec{k}}^{vc}}$,
+
+$\Sigma_{n, \vec{k}}(E) \approx \frac{V}{(2\pi)^{3}} \sum_{n'} \int_{\mathfrak{B}} \frac{\left| \braket{\phi_{n',\vec{k}'}^{vc}}{\hat{u}}{\phi_{n,\vec{k}}^{vc}} \right|^{2}}{E - \varepsilon_{n'}^{vc}(\vec{k}') - \Sigma_{n', \vec{k}'}(E)} d^{3}k'$,
+
+$E_{n}(\vec{k}) = \varepsilon_{n}^{vc}(\vec{k}) + \Sigma_{n, \vec{k}}(E_{n}(\vec{k}))$, 
+
+$\tau_{el}^{-1}(E_{n}(\vec{k})) = \frac{2 \left| Im(E_{n}(\vec{k})) \right|}{\hbar}$.
 </center>
 
-## e-h interaction
+Here, $\hat{H}_{vc}$ is the virtual crystal Hamiltonian, $\hat{H}^{AC}$ and $\hat{H}^{BC}$ are the Hamiltonians for AC and BC single crystals in the single particle approximation, $\varepsilon_{n}^{vc}(\vec{k})$ are the eigenvalues of the virtual crystal Hamiltonian $\hat{H}_{vc}$, $\ket{\phi_{n,\vec{k}}^{vc}}$ are single particle states of the virtual crystal, $\hat{u}$ is the perturbation operator reflecting the effect of disorder-induced potential fluctuations $u(\vec{r})$, $\Sigma_{n, \vec{k}}(E_{n}(\vec{k}))$ are the matrix elements of the self-energy operator $\hat{\Sigma}$ in the basis of the virtual crystal states $\ket{\phi_{n,\vec{k}}^{vc}}$, $E_{n}(\vec{k})$ is the complex carrier energy.
 
+## e-h interaction
+The dynamics of a charge carrier in the field of other carriers and an external electric $\vec{E}$ or magnetic $\vec{B}$ field is described assuming the quasiclassical approximation as follows:
+
+<center> 
+$\frac{d \vec{p}_{i}}{dt} = \sum_{j \neq i} \frac{k q_{i} q_{j}}{\varepsilon_{st} \left| \vec{r}_{i} - \vec{r}_{j} \right|^3} (\vec{r}_{i} - \vec{r}_{j}) + q_{i} (\vec{E} + \vec{v}_i \times \vec{B})$
+</center>
+
+Here, $\vec{p}_{i}$ and $\vec{v}_{i}$  are the momentum and velocity of ith charge particle, respectively, whereas $q_{i}$ is its charge.
+A certain electron-hole pair is considered to be recombined into an exciton at a certain step of the simulation if the following condition is satisfied:
+
+<center> 
+$\Delta E_{ij} = E_{k,i} + E_{k,j} + \frac{k q_{i} q_{j}}{\varepsilon_{st} \left| \vec{r}_{i} - \vec{r}_{j} \right|} - E_{k,ij}^{c}$
+</center>
+
+where $E_{k,i}$ and $E_{k,j}$ are the kinetic energies of ith and jth carriers, respectively, whereas $E_{k,ij}^{c}$ is the kinetic energy of them center of mass. 
+The electron-hole or exciton recombination into a photon is described by empirical parameters.
 
 ## Exciton decay
 
@@ -138,7 +160,15 @@ $\hat{H}_{vc} \ket{\phi_{n,\vec{k}}^{vc}} = \varepsilon_{n}^{vc}(\vec{k}) \ket{\
 ## Excitation capture and transfer
 The black-capture-sphere model can used to estimate the probability of carrier capture by emission centers [4].
 
-## Activation center decay 
+The excitation transfer rate $w_{T_{1} \rightarrow T_{2}}$ from donor $T_{1}$ to acceptor $T_{2}$ separated by the distance $r$ is calculated as follows [8]: 
 
+<center> 
+$w_{T_{1} \rightarrow T_{2}} = \frac{1}{\tau_{T_{1}}} \frac{R^{6}_{d-d, T_{1} \rightarrow T_{2}}}{r^{6}} + c_{T_{1} \rightarrow T_{2}} e^{-2 \frac{r}{\alpha_{T_{1} \rightarrow T_{2}}}}$,
+</center>
+
+where $\tau_{T_{1}}$ is the emission decay time of donor state $T_{1}$, $R_{d-d, T_{1} \rightarrow T_{2}}$ is the dipole-dipole transfer radius between donor state $T_{1}$ and acceptor state $T_{2}$, $\alpha_{T_{1} \rightarrow T_{2}}$ is the Dexter transfer radius, and $c_{T_{1} \rightarrow T_{2}}$ is the frequency factor.
+
+## Activation center decay 
+Usually the decay time of a certain activation center in a certain matrix host can be obtained experimentally and then used for general simulation.
 
 ## Light propagation and absorption
