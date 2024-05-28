@@ -47,6 +47,10 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/scroll-to-top.js
+
+extra_css:
+  - css/scroll-to-top.css
 
 copyright: |
   &copy; 2024 <a href="https://github.com/YauheniTalochkaN"  target="_blank" rel="noopener">Yauheni Talochka</a>
