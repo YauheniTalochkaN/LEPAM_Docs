@@ -1,5 +1,7 @@
+<div style="text-align: justify;">
 Here the input files for QE executables to evaluate material properties are presented using GaN crystal.
 The unit cell parameters for a certain crystal can be obtained from <a href="https://next-gen.materialsproject.org/materials"  target="_blank" rel="noopener">the Material Project database</a>.
+</div>
 
 ## SCF calculations
 
