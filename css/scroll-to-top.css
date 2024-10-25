@@ -1,0 +1,12 @@
+#scrollToTopButton {
+    color: rgb(1, 145, 145);
+    font-size: 40px; 
+    width: 60px;  
+    height: 60px;  
+    line-height: 0px;
+    transition: background-color 0.3s, color 0.3s;
+    right: 150px;  
+    top: 50%;  
+    transform: translateY(-50%); 
+    background-color: rgb(206, 206, 206); 
+}
