@@ -13,7 +13,7 @@
 
 <div style="display: flex; justify-content: center; align-items: flex-end;">
   <div style="text-align: center; margin: 0 10px;">
-    <img src="images/10keV_electron_track_in_LYSO.gif" alt="" width="450">
+    <img src="images/10keV_electron_track_in_LYSO.gif" alt="" width="550">
     <figcaption>10-keV electron track in LYSO:Ce scintillator</figcaption>
   </div>
   <div style="text-align: center; margin: 0 10px;">
