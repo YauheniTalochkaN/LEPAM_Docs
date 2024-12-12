@@ -1,5 +1,5 @@
-site_name: LEPAM Docs
-site_url: https://yauhenitalochkan.github.io/LEPAM_Docs/
+site_name: CMAP Docs
+site_url: https://yauhenitalochkan.github.io/CMAP_Docs/
 nav:
   - Home: index.md
   - Installation: install.md
