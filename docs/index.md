@@ -1,12 +1,12 @@
-# Welcome to the LEPAM package web page
+# Welcome to the CMAP package web page
 <div style="text-align:center">
-  <img src="images/Logo.PNG" alt="" width="400">
+  <img src="images/Logo.png" alt="" width="400">
 </div>
 
 <div style="text-align: justify;">
   <br>
   <br>
-  LEPAM (Low-Energy Particles And Materials) is a toolkit to simulate the propagation of low-kinetic-energy electrons and holes through amorphous or crystalline materials using the Monte Carlo technique. The LEPAM package is developed using object-oriented programming in the C++ language and based on the <a href="https://root.cern"  target="_blank" rel="noopener">CERN ROOT</a> libraries.
+  CMAP (Condensed Matters And Particles) is a toolkit to simulate the propagation of low-kinetic-energy electrons and holes through amorphous or crystalline materials using the Monte Carlo technique. The CMAP package is developed using object-oriented programming in the C++ language and based on the <a href="https://root.cern"  target="_blank" rel="noopener">CERN ROOT</a> libraries.
   <br>
   <br>
 </div>
