@@ -1,0 +1,781 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yauhenitalochkan.github.io/CMAP_Docs/processes/">
+      
+      
+        <link rel="prev" href="../install/">
+      
+      
+        <link rel="next" href="../QE_examples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>Processes - CMAP Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#list-of-processes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CMAP Docs" class="md-header__button md-logo" aria-label="CMAP Docs" data-md-component="logo">
+      
+  <img src="../images/Logo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CMAP Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../install/" class="md-tabs__link">
+        
+  
+    
+  
+  Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Processes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../QE_examples/" class="md-tabs__link">
+        
+  
+    
+  
+  QE applications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../references/" class="md-tabs__link">
+        
+  
+    
+  
+  References
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CMAP Docs" class="md-nav__button md-logo" aria-label="CMAP Docs" data-md-component="logo">
+      
+  <img src="../images/Logo2.png" alt="logo">
+
+    </a>
+    CMAP Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of processes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inelastic-electron-scattering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inelastic electron scattering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auger-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auger process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronhole-phonon-scattering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electron(hole)-phonon scattering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alloy-scattering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alloy scattering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-h-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      e-h interaction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exciton-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exciton decay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excitation-capture-and-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excitation capture and transfer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activation-center-decay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activation center decay
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-propagation-and-absorption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Light propagation and absorption
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QE_examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QE applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Processes</h1>
+
+<h2 id="list-of-processes">List of processes</h2>
+<div style="text-align:center">
+  <a class="glightbox" href="../images/Process_diagram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Process_diagram.png" alt="" width="700"></a>
+  <br>
+  <br>
+</div>
+
+<h2 id="inelastic-electron-scattering">Inelastic electron scattering</h2>
+<div style="text-align: justify;">
+The inelastic mean free path $\lambda_{peh}^{-1}$ for a charge particle in a crystalline material can be obtained using the dielectric permittivity $\varepsilon(\omega,q)$ [1]:
+</div>
+<p><center>
+<span class="arithmatex">\(\lambda_{peh}^{-1}(E) = \frac{2 Z^{2}}{\pi a_{B} m_{e} v^{2}(E)} \int_{0}^{E} d(\hbar \omega) \int_{q_{\text{min}}}^{q_{\text{max}}} \frac{dq}{q} \operatorname{Im}\left(- \frac{1}{\varepsilon(\omega,q)}\right)\)</span>,
+</center>
+<center><br />
+<span class="arithmatex">\(q_{_{min}^{max}} = \frac{1}{\hbar c} (\sqrt{E(E+2mc^{2})}) \pm \sqrt{(E- \hbar \omega) (E- \hbar \omega + 2mc^{2})}\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $Ze$ is the particle charge, $a_{B}$ is the Bohr radius for hydrogen, $m_{e}$ is the electron mass, $\hbar$ is the reduced Planck constant, $v(E) = c \frac{\sqrt{E(E+2mc^{2})}}{E+2mc^{{2}}}$ is the particle velocity, $m$ is the particle mass, $c$ is the light velocity.
+<br>
+<br>
+</div>
+<div style="text-align:center">
+  <a class="glightbox" href="../images/Inelastic_mean_free_path_for_electrons_in_LYSO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Inelastic_mean_free_path_for_electrons_in_LYSO.png" alt="" width="700"></a>
+  <figcaption>Inelastic mean free path for electrons interacting with subshells of LYSO scintillator.</figcaption>
+</div>
+<div style="text-align: justify;">
+The dielectric permittivity can be calculated using the TDDFT method or the more accurate GW+BSE approach implemented in the Quantum Espresso package [2].
+<br>
+<br>
+For ionic crystals imaginary part $\varepsilon_{2}(\omega, 0)$ of the dielectric permittivity can be obtained by using the photoexcitation cross section $\sigma_{i}$ of atomic shells of components presented in the Evaluated Photon Data Library (EPDL97) [3] taking into account the correction of the population $\Delta f_{i}$ and the energy $\Delta E_{i}$ of atomic shells:
+</div>
+<p><center><br />
+<span class="arithmatex">\(\varepsilon_{2}(\omega, 0) = \sum_{i} \varepsilon_{2}^{i}(\omega, 0) = \frac{nc}{\omega} \sum_{i} (f_{i} + \Delta f_{i}) N_{i} \sigma_{i} (\hbar \omega + \Delta E_{i})\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $n$ is the refractive index, $f_{i}$ is the population of i-th atomic shell, $N_{i}$ is the concentration of i-th-atomic-shell-related element.
+<br>
+<br>
+To extrapolate the dielectric permittivity for the case of nonzero $q$, the Generalized Oscillator Strength (GOS) approximation can be used [1]:
+</div>
+<p><center><br />
+<span class="arithmatex">\(\varepsilon_{2}(\omega, q) = \frac{\sqrt{m_{e}}}{2 \sqrt{2} \hbar^{2} \omega q} \sum_{i} \int_{E_{i} + (\sqrt{\hbar \omega - E_{i}} - \frac{\hbar q}{\sqrt{2 m_{e}}})^{2}}^{E_{i} + (\sqrt{\hbar \omega - E_{i}} + \frac{\hbar q}{\sqrt{2 m_{e}}})^{2}} \frac{\hbar \omega'}{\sqrt{\hbar \omega' - E_{i}}} \varepsilon_{2}^{i}(\omega', 0) d(\hbar \omega')\)</span>.
+</center></p>
+<div style="text-align: justify;">
+The Kramers-Kronig relations can be used to obtain the real part $\varepsilon_{1}(\omega, q)$ of the dielectric permittivity to correct the energy loss function:
+</div>
+<p><center><br />
+<span class="arithmatex">\(\varepsilon_{1}(\omega, q) = 1 + \frac{2}{\pi} \mathcal{P} \int_{0}^{\infty} \frac{\omega' \varepsilon_{2}(\omega', q)}{\omega'^{2}-\omega^{2}} d \omega'\)</span>.
+</center></p>
+<div style="text-align:center">
+  <a class="glightbox" href="../images/Energy_loss_function_in_LYSO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../images/Energy_loss_function_in_LYSO.png" alt="" width="700"></a>
+  <figcaption>Energy loss function in LYSO scintillators.</figcaption>
+</div>
+<p><br></p>
+<h2 id="auger-process">Auger process</h2>
+<div style="text-align: justify;">
+The rate of Auger decay $\tau_{hhe}^{-1}$ ($\sim 10^{15} s^{-1}$) for a core hole can be calculated as follows [4]:
+</div>
+<p><center> 
+<span class="arithmatex">\(\tau_{hhe}^{-1} = \frac{1}{\pi^{2}} \int d\omega \int d^{3}q \operatorname{Im}\left(- \frac{1}{\varepsilon(\omega,q)}\right) M_{\vec{q}}^{hh}(E, E-\hbar \omega) g_{h}(E-\hbar \omega)\)</span>,
+</center></p>
+<p>with </p>
+<p><center> 
+<span class="arithmatex">\(M_{\vec{q}}^{hh}(E, E-\hbar \omega) g_{h}(E) g_{h}(E-\hbar \omega) = \frac{V}{q^{2}} \sum_{_{n', \vec{k}'}^{n, \vec{k}}} (|\rho_{n,\vec{k};n,\vec{k}'}|^{2})_{-\vec{q}} \; \delta(E - E_{n'}(\vec{k}')) \, \delta(E - \hbar \omega - E_{n}(\vec{k}))\)</span>,</p>
+<p><span class="arithmatex">\((|\rho_{n,\vec{k};n,\vec{k}'}|^{2})_{-\vec{q}} = \frac{(2\pi)^{3} e^{2}}{V^{2}} P_{n,\vec{k};n,\vec{k}'} \delta(\vec{q} + \vec{k} - \vec{k}')\)</span>,</p>
+<p><span class="arithmatex">\(P_{n,\vec{k};n,\vec{k}'} = |\int_{v} u_{n,\vec{k}}^{*}(\vec{r}) u_{n',\vec{k}'}(\vec{r})|^{2} d^{3} r\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $g_{h}(E)$ is the density of states in the valence and core bands of a crystal, $V$ is the crystal volume, $v$ is the volume of the unit cell, $u_{n,\vec{k}}(\vec{r})$ is the periodic part of the Bloch function: $\psi_{n,\vec{k}}(\vec{r}) = \frac{1}{\sqrt{V}} u_{n,\vec{k}}(\vec{r}) e^{i \vec{k} \cdot \vec{r}}$.
+</div>
+
+<h2 id="electronhole-phonon-scattering">Electron(hole)-phonon scattering</h2>
+<div style="text-align: justify;">
+DFT packages such as Quantum Espresso [2] can be used to calculate the carrier-phonon scattering rate with high accuracy for both single crystals and substitutional solid solutions.
+<br>
+<br>
+The electron(hole)-phonon scattering rate $\tau_{ph, _{abs}^{em}}^{-1}$ can be evaluated assuming the single parabolic band approximation in the approximations of the Fröhlich polarization and the deformational potential [5]:
+</div>
+<p><center> 
+<span class="arithmatex">\(\tau_{PLO, s, _{abs}^{em}}^{-1}(E_{k}) = \frac{e^{2} \sqrt{m^{*}} \hbar \Omega_{LO,s}}{4 \sqrt{2} \pi \varepsilon_{0} \hbar \tilde{\varepsilon}_{s}} \frac{1}{E_{k}} (n(\hbar \Omega_{LO, s}) + \frac{1}{2} \pm \frac{1}{2}) \, ln\left(\left| \frac{\sqrt{E_{k}}+\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}}{\sqrt{E_{k}}-\sqrt{E_{k} \mp \hbar \Omega_{LO,s}}} \right|\right)\)</span>,</p>
+<p><span class="arithmatex">\(\tau_{DLA, _{abs}^{em}}^{-1}(E_{k}) = \frac{\sqrt{m^{*}} \sigma_{d}^{2}}{4 \sqrt{2} \pi \hbar c_{L} \rho} \frac{1}{\sqrt{E_{k}}} \int_{0}^{2\frac{\sqrt{2 m^{*} E_{k} \mp c_{L} m^{*}}}{\hbar}} (n(\hbar q c_{L}) + \frac{1}{2} \pm \frac{1}{2}) q^{2} dq\)</span>, </p>
+<p><span class="arithmatex">\(\tau_{PLA, _{abs}^{em}}^{-1}(E_{k}) = \frac{\sqrt{m^{*}} (k e \beta)^{2}}{4 \sqrt{2} \pi \hbar c_{L} \rho} \frac{1}{\sqrt{E_{k}}} \int_{0}^{2\frac{\sqrt{2 m^{*} E_{k} \mp c_{L} m^{*}}}{\hbar}} (n(\hbar q c_{L}) + \frac{1}{2} \pm \frac{1}{2}) \frac{\lambda^{2}_{TF} q^{2}}{1 + \lambda^{2}_{TF} q^{2}} dq\)</span>, 
+</center></p>
+<p>with </p>
+<p><center> 
+<span class="arithmatex">\(\beta = 4 \pi \frac{e_{14}}{\varepsilon_{st}}\)</span>, <span class="arithmatex">\(k = \frac{1}{4 \pi \varepsilon_{0}}\)</span>, <span class="arithmatex">\(n(\hbar \Omega) = \frac{1}{e^{\frac{\hbar \Omega}{k_{B} T}}-1}\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $m^{*}$  is the effective electron(hole) mass, $\Omega_{LO,s}$ is the longitudinal optical phonon frequency, $\varepsilon_{0}$ is the vacuum permittivity, $e$ is the electron charge, $k_{B}$ is the Boltzmann constant, $\tilde{\varepsilon}_{s}$ is the effective dielectric permittivity, $\rho$ is the crystal density, $c_{L}$ is the longitudinal sound velocity, $\sigma_{d}$ is the acoustical deformation potential, $e_{14}$ is the piezoelectric constant, $\varepsilon_{st}$ is the static dielectric permittivity, $\lambda^{2}_{TF}$ is the Thomas-Fermi screening length. 
+<br>
+<br>
+The electron(hole)-phonon scattering rate $\tau_{ph, _{abs}^{em}, disorder}^{-1}$ in a substitutional solid solution can be calculated by integrating $\tau_{ph, _{abs}^{em}}^{-1}$ with the semiclassical confining potential $E_{0}(\vec{r})$, which is evaluated using the local landscape method [7]:
+</div>
+<p><center> 
+<span class="arithmatex">\(\tau_{ph, _{abs}^{em}, disorder}^{-1} = \frac{1}{V} \int_{V} \tau_{ph, _{abs}^{em}}^{-1}(E + \tilde{E}_{0}(\vec{r})) d^{3}r\)</span>,
+</center></p>
+<p>with </p>
+<p><center> 
+<span class="arithmatex">\(\tilde{E}_{0}(\vec{r}) = E_{0}(\vec{r}) - &lt;E_{0}&gt;_{V}\)</span>.
+</center></p>
+<p>The semiclassical confining potential <span class="arithmatex">\(E_{0}(\vec{r})\)</span> can be obtained by solving the following equation:</p>
+<p><center> 
+<span class="arithmatex">\((- \frac{\hbar^{2}}{2 m^{*}_{vc}} + \tilde{u}(\vec{r})) \nu(\vec{r}) = 1\)</span>,</p>
+<p><span class="arithmatex">\(\tilde{u}(\vec{r}) = u(\vec{r}) - min(u(\vec{r}))\)</span>,</p>
+<p><span class="arithmatex">\(E_{0}(\vec{r}) \approx \frac{1}{\nu(\vec{r})} + min(u(\vec{r}))\)</span>,
+</center></p>
+<p>with the periodic boundary conditions</p>
+<p><center> 
+<span class="arithmatex">\(\nu(\vec{r} + \vec{T}_{i}) = \nu(\vec{r})\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $u(\vec{r})$ is the disorder-induced potential fluctuations in the quasiclassical approximation, $m^{*}_{vc}$ is the electron (hole) effective mass in the virtual crystal.
+</div>
+
+<h2 id="alloy-scattering">Alloy scattering</h2>
+<div style="text-align: justify;">
+The alloy scattering rate $\tau_{el}^{-1}$ in crystalline compound can be calculated using the CPA-based method [6]:
+</div>
+<p><center> 
+<span class="arithmatex">\(\hat{H}_{vc} = x \hat{H}^{AC} + (1-x) \hat{H}^{BC}\)</span>,</p>
+<p><span class="arithmatex">\(\hat{H}_{vc} \ket{\phi_{n,\vec{k}}^{vc}} = \varepsilon_{n}^{vc}(\vec{k}) \ket{\phi_{n,\vec{k}}^{vc}}\)</span>,</p>
+<p><span class="arithmatex">\(\Sigma_{n, \vec{k}}(E) \approx \frac{V}{(2\pi)^{3}} \sum_{n'} \int_{\mathfrak{B}} \frac{\left| \braket{\phi_{n',\vec{k}'}^{vc}}{\hat{u}}{\phi_{n,\vec{k}}^{vc}} \right|^{2}}{E - \varepsilon_{n'}^{vc}(\vec{k}') - \Sigma_{n', \vec{k}'}(E)} d^{3}k'\)</span>,</p>
+<p><span class="arithmatex">\(E_{n}(\vec{k}) = \varepsilon_{n}^{vc}(\vec{k}) + \Sigma_{n, \vec{k}}(E_{n}(\vec{k}))\)</span>, </p>
+<p><span class="arithmatex">\(\tau_{el}^{-1}(E_{n}(\vec{k})) = \frac{2 \left| Im(E_{n}(\vec{k})) \right|}{\hbar}\)</span>.
+</center></p>
+<div style="text-align: justify;">
+Here, $\hat{H}_{vc}$ is the virtual crystal Hamiltonian, $\hat{H}^{AC}$ and $\hat{H}^{BC}$ are the Hamiltonians for AC and BC single crystals in the single particle approximation, $\varepsilon_{n}^{vc}(\vec{k})$ are the eigenvalues of the virtual crystal Hamiltonian $\hat{H}_{vc}$, $\ket{\phi_{n,\vec{k}}^{vc}}$ are single particle states of the virtual crystal, $\hat{u}$ is the perturbation operator reflecting the effect of disorder-induced potential fluctuations $u(\vec{r})$, $\Sigma_{n, \vec{k}}(E_{n}(\vec{k}))$ are the matrix elements of the self-energy operator $\hat{\Sigma}$ in the basis of the virtual crystal states $\ket{\phi_{n,\vec{k}}^{vc}}$, $E_{n}(\vec{k})$ is the complex carrier energy.
+</div>
+
+<h2 id="e-h-interaction">e-h interaction</h2>
+<div style="text-align: justify;">
+The dynamics of a charge carrier in the field of other carriers and an external electric $\vec{E}$ or magnetic $\vec{B}$ field is described assuming the quasiclassical approximation as follows:
+</div>
+<p><center> 
+<span class="arithmatex">\(\frac{d \vec{p}_{i}}{dt} = \sum_{j \neq i} \frac{k q_{i} q_{j}}{\varepsilon_{st} \left| \vec{r}_{i} - \vec{r}_{j} \right|^3} (\vec{r}_{i} - \vec{r}_{j}) + q_{i} (\vec{E} + \vec{v}_i \times \vec{B})\)</span>
+</center></p>
+<div style="text-align: justify;">
+Here, $\vec{p}_{i}$ and $\vec{v}_{i}$  are the momentum and velocity of ith charge particle, respectively, whereas $q_{i}$ is its charge.
+A certain electron-hole pair is considered to be recombined into an exciton at a certain step of the simulation if the following condition is satisfied:
+</div>
+<p><center> 
+<span class="arithmatex">\(\Delta E_{ij} = E_{k,i} + E_{k,j} + \frac{k q_{i} q_{j}}{\varepsilon_{st} \left| \vec{r}_{i} - \vec{r}_{j} \right|} - E_{k,ij}^{c}\)</span>
+</center></p>
+<div style="text-align: justify;">
+where $E_{k,i}$ and $E_{k,j}$ are the kinetic energies of ith and jth carriers, respectively, whereas $E_{k,ij}^{c}$ is the kinetic energy of them center of mass. 
+The electron-hole or exciton recombination into a photon is described by empirical parameters.
+</div>
+
+<h2 id="exciton-decay">Exciton decay</h2>
+<h2 id="excitation-capture-and-transfer">Excitation capture and transfer</h2>
+<div style="text-align: justify;">
+The black-capture-sphere model can used to estimate the probability of carrier capture by emission centers [4].
+<br>
+<br>
+The excitation transfer rate $w_{T_{1} \rightarrow T_{2}}$ from donor $T_{1}$ to acceptor $T_{2}$ separated by the distance $r$ is calculated as follows [8]: 
+</div>
+<p><center> 
+<span class="arithmatex">\(w_{T_{1} \rightarrow T_{2}} = \frac{1}{\tau_{T_{1}}} \frac{R^{6}_{d-d, T_{1} \rightarrow T_{2}}}{r^{6}} + c_{T_{1} \rightarrow T_{2}} e^{-2 \frac{r}{\alpha_{T_{1} \rightarrow T_{2}}}}\)</span>,
+</center></p>
+<div style="text-align: justify;">
+where $\tau_{T_{1}}$ is the emission decay time of donor state $T_{1}$, $R_{d-d, T_{1} \rightarrow T_{2}}$ is the dipole-dipole transfer radius between donor state $T_{1}$ and acceptor state $T_{2}$, $\alpha_{T_{1} \rightarrow T_{2}}$ is the Dexter transfer radius, and $c_{T_{1} \rightarrow T_{2}}$ is the frequency factor.
+</div>
+
+<h2 id="activation-center-decay">Activation center decay</h2>
+<div style="text-align: justify;">
+Usually the decay time of a certain activation center in a certain matrix host can be obtained experimentally and then used for general simulation.
+</div>
+
+<h2 id="light-propagation-and-absorption">Light propagation and absorption</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://yauhenitalochkan.github.io/MyWebSite/"  target="_blank" rel="noopener">Yauheni Talochka</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/scroll-to-top.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
